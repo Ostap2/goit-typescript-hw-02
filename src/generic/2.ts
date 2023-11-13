@@ -12,6 +12,7 @@ type AllType = {
 }
 
 function compare<T extends AllType>(top: T, bottom: T): AllType {
+
   return {
     name: top.name,
     color: top.color,
@@ -21,4 +22,8 @@ function compare<T extends AllType>(top: T, bottom: T): AllType {
 }
 
 
-export {};
+const obj1: AllType = { name: 'Object 1', position: 1, color: 'red', weight: 10 };
+const obj2: AllType = { name: 'Object 2', position: 2, color: 'blue', weight: 20 };
+
+const result2 = compare(obj1, obj2);
+console.log(result2);
